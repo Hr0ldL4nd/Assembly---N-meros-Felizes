@@ -13,9 +13,9 @@ addi a3, zero, 32 # armazena o número que desejamos ver se é feliz
 bne a3, a0, while
 
 while:
-	sw a3, 0(ra)
+    sw a3, 0(ra)
     addi ra, ra, 13
-	add a6, zero, zero # armazena alg. centenas
+    add a6, zero, zero # armazena alg. centenas
     add a5, zero, zero # armazena alg. dezenas
     #o algarismo das unidades será o próprio a3 após as subtrações
     
@@ -40,19 +40,19 @@ continuar:
     bne a3, a0, while #caso nenhuma das condições de parada sejam atingidas, recomeça o ciclo
     
 centenas:
-	addi a3, a3, -100
+    addi a3, a3, -100
     addi a6, a6, 1
     bge a3, a2, centenas
     bge a3, a1, dezenas 
     bge a3, zero, unidades
     
 dezenas:
-	addi a3, a3, -10
+    addi a3, a3, -10
     addi a5, a5, 1
     bge a3, a1, dezenas
     
 unidades:
-	mul a3, a3, a3 #já faz o quadrado do dígito das unidades
+    mul a3, a3, a3 #já faz o quadrado do dígito das unidades
     beq a3, a3, continuar #sempre verdade, sempre continua
     
 n_feliz:
@@ -62,7 +62,7 @@ n_feliz:
     beq a1, a1, done
 
 feliz:
-	# se feliz, o valor do registrador a3 termina em 1
-	sw a3, 0(ra)
+    # se feliz, o valor do registrador a3 termina em 1
+    sw a3, 0(ra)
     
 done:
