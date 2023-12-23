@@ -1,7 +1,7 @@
-#código números felizes - Orlando Moreira de Melo Neto - 539268
-#este código foi feito usando o venus, recomendo que rode lá
+#código números felizes - Orlando Moreira
+#este código foi feito usando o compilador venus, recomendo que rode lá
 
-addi a4, zero, 4 #vai servir de condição de parada, uma vez que gera um ciclo infinito infeliz
+addi a4, zero, 4   #vai servir de condição de parada, uma vez que gera um ciclo infinito infeliz
 addi a2, zero, 100 #referência centenas
 addi a1, zero, 10  #referência dezenas
 addi a0, zero, 1   #referência unidades e condição de parada
